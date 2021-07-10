@@ -84,12 +84,15 @@
               >Buy large</a
             >
           </div>
-          <div class="col-md-5 text-center">
-            <img
-              class="img-fluid d-none d-md-block"
-              src="/Assets/img1.jpg"
-              alt="cover book"
-            />
+          <div class="col-md-5 text-center d-none d-md-block">
+            <!-- tooltip -->
+            <span
+              class="tt"
+              data-bs-placement="bottom"
+              title="Book cover image"
+            >
+              <img class="img-fluid" src="/Assets/img1.jpg" alt="cover book" />
+            </span>
           </div>
         </div>
       </div>
@@ -429,27 +432,62 @@
           <div class="col-lg-6">
             <form>
               <label for="email" class="form-label">Email address:</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="e.g.albert@example.com"
-              />
+              <div class="input-group mb-4">
+                <span class="input-group-text">
+                  <i class="bi bi-envelope-fill"></i>
+                </span>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="e.g.albert@example.com"
+                />
+                <!-- tooltip -->
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="bottom"
+                    title="Input your email address"
+                  >
+                    <i class="bi bi-question-circle text-muted"></i>
+                  </span>
+                </span>
+              </div>
               <label for="name" class="form-label">Name:</label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                placeholder="e.g. Albert"
-              />
+              <div class="input-group mb-4">
+                <span class="input-group-text">
+                  <i class="bi bi-person-circle"></i>
+                </span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="e.g. Albert"
+                />
+                <!-- tooltip -->
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="bottom"
+                    title="Input your name"
+                  >
+                    <i class="bi bi-question-circle text-muted"></i>
+                  </span>
+                </span>
+              </div>
               <label for="subject" class="form-label"
                 >What is your question about?</label
               >
-              <select name="" id="subject" class="form-select">
-                <option value="pricing" selected>Pricing query</option>
-                <option value="content">Content query</option>
-                <option value="other">Other query</option>
-              </select>
+              <div class="input-group mb-4">
+                <span class="input-group-text">
+                  <i class="bi bi-chat-left-dots-fill"></i>
+                </span>
+                <select name="" id="subject" class="form-select">
+                  <option value="pricing" selected>Pricing query</option>
+                  <option value="content">Content query</option>
+                  <option value="other">Other query</option>
+                </select>
+              </div>
               <div class="form-floating mb-4 mb-5">
                 <textarea
                   id="query"
@@ -461,7 +499,6 @@
               <div class="mb-5 text-center">
                 <button type="submit" class="btn btn-secondary">Submit</button>
               </div>
-              <!-- **** next input group **** -->
             </form>
           </div>
         </div>
@@ -472,5 +509,11 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const tooltip = document.querySelector(".tt");
+      tooltip.forEach((t) => {
+        new bootstrap.Tooltip(t);
+      });
+    </script>
   </body>
 </html>
