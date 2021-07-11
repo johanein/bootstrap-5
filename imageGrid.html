@@ -80,8 +80,17 @@
             <p class="lead my-5 text-muted">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </p>
-            <a href="" id="pricing" class="btn btn-secondary btn-lg"
-              >Buy large</a
+            <a href="#pricing" id="pricing" class="btn btn-secondary btn-lg"
+              >Buy Now</a
+            >
+            <!-- open sidebar / offcanvas -->
+            <a
+              href="#sidebar"
+              class="d-block mt-3"
+              data-bs-toggle="offcanvas"
+              role="button"
+              aria-controls="sidebar"
+              >Explore my other books</a
             >
           </div>
           <div class="col-md-5 text-center d-none d-md-block">
@@ -115,7 +124,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
                 <a href="#" class="btn btn-outline-primary btn-lg mt-5"
-                  >But now</a
+                  >Buy now</a
                 >
               </div>
             </div>
@@ -133,7 +142,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
                 <a href="#" class="btn btn-outline-primary btn-lg mt-3"
-                  >But now</a
+                  >Buy now</a
                 >
               </div>
             </div>
@@ -148,7 +157,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
                 <a href="#" class="btn btn-outline-primary btn-lg mt-5"
-                  >But now</a
+                  >Buy now</a
                 >
               </div>
             </div>
@@ -570,6 +579,49 @@
           <div class="modal-footer">
             <button class="btn btn-primary">Submit</button>
           </div>
+        </div>
+      </div>
+    </div>
+    <!-- offcanvas -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="sidebar"
+      aria-labelledby="sidebar-label"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sidebar-label">My other books</h5>
+        <button
+          class="btn-close"
+          type="button"
+          aria-label="close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, dolores
+          recusandae? Ab, iste, architecto cumque explicabo magni dolorem dicta
+          dignissimos error repudiandae magnam nisi quaerat autem reiciendis
+          distinctio labore quos.
+        </p>
+        <!-- dropdowns -->
+        <div class="dropdown mt-3">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="book-dropdown"
+            data-bs-toggle="dropdown"
+          >
+            Choose a book title
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="book-dropdown">
+            <li>
+              <a href="#" class="dropdown-item">Become a react superhero</a>
+            </li>
+            <li><a href="#" class="dropdown-item">conquering vue</a></li>
+            <li><a href="#" class="dropdown-item">Level nextjs</a></li>
+          </ul>
         </div>
       </div>
     </div>
